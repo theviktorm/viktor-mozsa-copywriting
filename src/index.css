@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 2s steps(40, end);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+:root {
+  /* Core colors */
+  --white: #ffffff;
+  --black: #000000;
+  --transparent: transparent;
+  
+  /* New dynamic blue palette */
+  --blue-deep: #0F172A;    /* Deep navy blue - anchor color */
+  --blue-electric: #2563EB; /* Electric blue - vibrant accent */
+  --blue-wild: #00A3FF;    /* Bold cerulean - wild element */
+  
+  /* Aurora gradient colors */
+  --blue-300: var(--blue-wild);
+  --blue-400: var(--blue-electric);
+  --blue-500: var(--blue-deep);
+  --indigo-300: #93c5fd;
+  --violet-200: #ddd6fe;
+}
+
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 60s linear infinite;
+}
